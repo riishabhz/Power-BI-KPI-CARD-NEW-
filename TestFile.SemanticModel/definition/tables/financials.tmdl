@@ -1,6 +1,42 @@
 table financials
 	lineageTag: 8e4dbb10-5b00-4ca6-a02d-a4e358875cf6
 
+	measure 'Sales PY' = CALCULATE(SUM(financials[Sales]), SAMEPERIODLASTYEAR(financials[Date]))
+		lineageTag: 96a93953-c9fe-41ed-8c30-11f534f6e876
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Sales YoY' = CALCULATE((SUM(financials[Sales])-[Sales PY])/[Sales PY])
+		formatString: 0.00%;-0.00%;0.00%
+		lineageTag: 2a4bffd0-e1b7-4cf3-ab8d-663e1b5cac6c
+
+	measure 'Profit PY' = CALCULATE(SUM(financials[Profit]), SAMEPERIODLASTYEAR(financials[Date]))
+		lineageTag: 66b0163a-7381-4f29-9a93-f2c24a396253
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Profit YoY' = CALCULATE((SUM(financials[Profit])-[Profit PY])/[Profit PY])
+		formatString: 0.00%;-0.00%;0.00%
+		lineageTag: c35502e8-dc02-436c-bc02-6dd9b2d4f33e
+
+	measure 'Units Sold PY' = CALCULATE(SUM(financials[Units Sold]), SAMEPERIODLASTYEAR(financials[Date]))
+		lineageTag: 2988022a-b70e-49a1-bba2-44bbdef78b0a
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Units Sold YoY' = CALCULATE((SUM(financials[Units Sold])-[Units Sold PY])/[Units Sold PY])
+		formatString: 0.00%;-0.00%;0.00%
+		lineageTag: 5ac81036-7982-4156-b47c-2e5f0e4bea80
+
+	measure 'Discounts PY' = CALCULATE(SUM(financials[Discounts]), SAMEPERIODLASTYEAR(financials[Date]))
+		lineageTag: f8c3704c-487b-4e89-8d6a-34f6b3966c21
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Discounts YoY' = CALCULATE((SUM(financials[Discounts])-[Discounts PY])/[Discounts PY])
+		formatString: 0.00%;-0.00%;0.00%
+		lineageTag: bc5753ae-c319-4c28-a4a5-e88f8fdbe334
+
 	column Segment
 		dataType: string
 		lineageTag: 07a35293-3617-45a7-9ec9-871bc528b4ff
