@@ -37,6 +37,21 @@ table financials
 		formatString: 0.00%;-0.00%;0.00%
 		lineageTag: bc5753ae-c319-4c28-a4a5-e88f8fdbe334
 
+	measure 'Sales Icon URL' = ```
+			"https://img.icons8.com/fluency-systems-regular/48/total-sales.png"
+			
+			```
+		lineageTag: 52acc56d-eb17-4349-8a15-2c9d24ccd8c6
+
+	measure 'Profit icon URL' = "https://img.icons8.com/ios-glyphs/30/economic-improvement.png"
+		lineageTag: f45f55a0-3947-49ec-9285-f1fa2797fc2b
+
+	measure 'Discounts icon URL' = "https://img.icons8.com/external-smashingstocks-detailed-outline-smashing-stocks/66/external-discounts-shopping-and-ecommerce-smashingstocks-detailed-outline-smashing-stocks.png"
+		lineageTag: b14c9d67-52d0-4885-ba37-f0798d4294f7
+
+	measure 'units sold image url' = "https://img.icons8.com/external-outline-andi-nur-abdillah/64/external-commerce-e-commerce-outline-outline-andi-nur-abdillah-2.png"
+		lineageTag: 077b6eba-c828-4f08-93a9-efc6287e6603
+
 	column Segment
 		dataType: string
 		lineageTag: 07a35293-3617-45a7-9ec9-871bc528b4ff
